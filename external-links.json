@@ -8,5 +8,15 @@
     "icon": "⚡",
     "author": "PhET Interactive Simulations（University of Colorado Boulder）",
     "url": "https://phet.colorado.edu/zh_TW/simulations/circuit-construction-kit-dc"
+  },
+   {
+    "title": "能量形式與轉化",
+    "category": "physics",
+    "topic": "能量守恆",
+    "description": "觀察不同機制的能量形式與轉化",
+    "tags": ["位能", "動能", "能量守恆", "熱能"],
+    "icon": "💫",
+    "author": "PhET Interactive Simulations（University of Colorado Boulder）",
+    "url": "https://phet.colorado.edu/zh_TW/simulations/energy-forms-and-changes/about"
   }
 ]
