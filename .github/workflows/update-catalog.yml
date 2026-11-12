@@ -1,27 +1,23 @@
 name: Update animation catalog
-
 on:
   push:
     branches: [main]
     paths:
-      - "animations/**"
-      - "scripts/build_catalog.py"
-      - ".github/workflows/update-catalog.yml"
+      - 'animations/**'
+      - 'external-links.json'
+      - 'scripts/build_catalog.py'
+      - '.github/workflows/update-catalog.yml'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   update-catalog:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Generate catalog
         run: python3 scripts/build_catalog.py
-
       - name: Commit catalog
         run: |
           git config user.name "github-actions[bot]"
