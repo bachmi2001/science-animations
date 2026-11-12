@@ -3,7 +3,24 @@ const ICONS={physics:'⚙️',chemistry:'🧪',earth:'🌍',biology:'🧬',math:
 const cards=document.querySelector('#cards'),filters=document.querySelector('#filters'),search=document.querySelector('#search'),count=document.querySelector('#count'),empty=document.querySelector('#empty'),heading=document.querySelector('#section-title');
 let items=[],active='all';
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n}
-function draw(){const q=search.value.trim().toLocaleLowerCase('zh-Hant');const found=items.filter(x=>(active==='all'||x.category===active)&&[x.title,x.description,x.topic,x.categoryLabel,...(x.tags||[])].join(' ').toLocaleLowerCase('zh-Hant').includes(q));cards.replaceChildren();count.textContent=`${found.length} 個動畫`;empty.hidden=found.length!==0;heading.textContent=active==='all'?'全部動畫':(LABELS[active]||'其他')+'動畫';for(const item of found){const c=el('article','card'),v=el('div','visual',item.icon||ICONS[item.category]||'🔬'),b=el('div','card-body');const m=el('div','meta',`${item.categoryLabel||LABELS[item.category]||'其他'} · ${item.topic||'互動探索'}`),h=el('h3','',item.title),p=el('p','',item.description||'點選開始互動探索。'),a=el('a','','開啟互動動畫 →');a.href=item.url;a.setAttribute('aria-label',`開啟${item.title}`);b.append(m,h,p,a);c.append(v,b);cards.append(c)}}
+function draw(){
+ const q=search.value.trim().toLocaleLowerCase('zh-Hant');
+ const found=items.filter(x=>(active==='all'||x.category===active)&&[x.title,x.description,x.topic,x.categoryLabel,x.author,...(x.tags||[])].join(' ').toLocaleLowerCase('zh-Hant').includes(q));
+ cards.replaceChildren();count.textContent=`${found.length} 個動畫`;empty.hidden=found.length!==0;
+ heading.textContent=active==='all'?'全部動畫':(LABELS[active]||'其他')+'動畫';
+ for(const item of found){
+  const external=item.source==='external'||/^https?:\/\//i.test(item.url||'');
+  const c=el('article','card'),v=el('div','visual',item.icon||ICONS[item.category]||'🔬'),b=el('div','card-body');
+  const m=el('div','meta',`${item.categoryLabel||LABELS[item.category]||'其他'} · ${item.topic||'互動探索'} · ${external?'外部資源':'本站動畫'}`);
+  const h=el('h3','',item.title),p=el('p','',item.description||'點選開始互動探索。');
+  const a=el('a','',external?'前往原作者網站 ↗':'開啟互動動畫 →');a.href=item.url;
+  a.setAttribute('aria-label',`${external?'前往原作者網站':'開啟'}${item.title}`);
+  if(external){a.target='_blank';a.rel='noopener noreferrer'}
+  b.append(m,h,p);
+  if(external&&item.author)b.append(el('p','',`來源：${item.author}`));
+  b.append(a);c.append(v,b);cards.append(c)
+ }
+}
 function renderFilters(){filters.replaceChildren();for(const [key,label] of [['all','全部'],...Object.entries(LABELS)]){if(key!=='all'&&!items.some(x=>x.category===key))continue;const btn=el('button',key===active?'active':'',label);btn.type='button';btn.setAttribute('aria-pressed',String(key===active));btn.onclick=()=>{active=key;renderFilters();draw()};filters.append(btn)}}
 search.addEventListener('input',draw);
 fetch('catalog.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('目錄讀取失敗');return r.json()}).then(data=>{items=Array.isArray(data)?data:[];renderFilters();draw()}).catch(e=>{empty.hidden=false;empty.textContent='無法讀取動畫目錄，請確認 catalog.json 已產生。';console.error(e)});
