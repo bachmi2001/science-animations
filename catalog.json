@@ -1,0 +1,17 @@
+[
+  {
+    "title": "三角形內角和 180°",
+    "category": "math",
+    "categoryLabel": "數學",
+    "topic": "幾何與角度",
+    "description": "拖動三角形的三個頂點，即時觀察內角總和。",
+    "tags": [
+      "三角形",
+      "角度",
+      "180度",
+      "互動"
+    ],
+    "icon": "📐",
+    "url": "animations/triangle-angles.html"
+  }
+]
