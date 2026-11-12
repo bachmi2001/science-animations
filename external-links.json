@@ -18,5 +18,15 @@
     "icon": "💫",
     "author": "PhET Interactive Simulations（University of Colorado Boulder）",
     "url": "https://phet.colorado.edu/zh_TW/simulations/energy-forms-and-changes/about"
+  },
+  {
+    "title": "phet物理模擬",
+    "category": "physics",
+    "topic": "物理",
+    "description": "phet模擬網站",
+    "tags": ["物理", "模型", "模擬"],
+    "icon": "💫",
+    "author": "PhET Interactive Simulations（University of Colorado Boulder）",
+    "url": "https://phet.colorado.edu/zh_TW/simulations/filter?subjects=physics&type=html"
   }
 ]
