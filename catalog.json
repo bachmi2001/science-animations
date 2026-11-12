@@ -15,6 +15,7 @@
       "軌跡"
     ],
     "icon": "🌙",
+    "source": "local",
     "url": "animations/moon-galactic-journey.html"
   },
   {
@@ -30,6 +31,24 @@
       "互動"
     ],
     "icon": "📐",
+    "source": "local",
     "url": "animations/triangle-angles.html"
+  },
+  {
+    "title": "電路組裝模擬器",
+    "category": "physics",
+    "categoryLabel": "物理",
+    "topic": "電學與電路",
+    "description": "觀察串聯、並聯電路及電流變化。",
+    "tags": [
+      "電路",
+      "電流",
+      "電池",
+      "燈泡"
+    ],
+    "icon": "⚡",
+    "source": "external",
+    "author": "PhET Interactive Simulations（University of Colorado Boulder）",
+    "url": "https://phet.colorado.edu/zh_TW/simulations/circuit-construction-kit-dc"
   }
 ]
