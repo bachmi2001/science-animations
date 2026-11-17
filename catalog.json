@@ -1,5 +1,25 @@
 [
   {
+    "title": "酸、鹼、鹽：電解質在水中的解離",
+    "category": "chemistry",
+    "categoryLabel": "化學",
+    "topic": "電解質與解離",
+    "description": "互動觀察鹽酸、醋酸、氫氧化鈉、氫氧化鈣、氯化鈉及氯化鈣在水中的電離或解離，並比較正負離子、強弱酸與粒子數量。",
+    "tags": [
+      "酸",
+      "鹼",
+      "鹽",
+      "電解質",
+      "電離",
+      "解離",
+      "離子",
+      "水溶液"
+    ],
+    "icon": "💧",
+    "source": "local",
+    "url": "animations/electrolyte-dissociation.html"
+  },
+  {
     "title": "月球的銀河旅程",
     "category": "earth",
     "categoryLabel": "地球科學",
