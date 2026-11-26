@@ -1,5 +1,24 @@
 [
   {
+    "title": "圓球落水與浮力平衡（影片）",
+    "category": "physics",
+    "categoryLabel": "物理",
+    "topic": "浮力與密度 · 16 秒影片",
+    "description": "觀察圓球落水、上浮至水面穩定的過程，理解靜止時浮力與重力平衡。支援暫停、調速、全螢幕及下載。",
+    "tags": [
+      "浮力",
+      "重力",
+      "密度",
+      "落水",
+      "漂浮",
+      "MP4",
+      "影片"
+    ],
+    "icon": "🎬",
+    "source": "local",
+    "url": "animations/ball-float/index.html"
+  },
+  {
     "title": "地球的銀河旅程",
     "category": "earth",
     "categoryLabel": "地球科學",
