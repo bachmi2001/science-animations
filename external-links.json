@@ -20,6 +20,16 @@
     "url": "https://phet.colorado.edu/zh_TW/simulations/energy-forms-and-changes/about"
   },
   {
+  "title": "台灣地震 3D 空間分布（1990–2025）",
+  "category": "earth",
+  "topic": "地震與板塊構造",
+  "description": "以真實震源資料呈現台灣地震三維分布，可逐年播放、篩選規模與觀察板塊隱沒。",
+  "tags": ["地震", "震源深度", "板塊構造", "隱沒帶", "台灣", "3D"],
+  "icon": "🌏",
+  "author": "101事務所",
+  "url": "https://studio-101.github.io/taiwan-earthquake-site/"
+  },
+  {
     "title": "phet物理模擬",
     "category": "physics",
     "topic": "物理",
