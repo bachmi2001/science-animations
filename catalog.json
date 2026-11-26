@@ -55,6 +55,24 @@
     "url": "animations/triangle-angles.html"
   },
   {
+    "title": "流體力學模擬器：圓球落水與浮力擺動",
+    "category": "physics",
+    "categoryLabel": "物理",
+    "topic": "浮力與流體阻力",
+    "description": "調整圓球密度、釋放高度、半徑與水體阻尼，觀察落水、浮沉、受力向量及即時位移時間圖。",
+    "tags": [
+      "浮力",
+      "密度",
+      "重力",
+      "流體阻力",
+      "阿基米德原理",
+      "位移時間圖"
+    ],
+    "icon": "💧",
+    "source": "local",
+    "url": "animations/water-entry-simulator.html"
+  },
+  {
     "title": "電路組裝模擬器",
     "category": "physics",
     "categoryLabel": "物理",
